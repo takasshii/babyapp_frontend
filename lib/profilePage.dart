@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border:
-                                Border.all(width: 1, color: Colors.white10)),
+                            Border.all(width: 1, color: Colors.white10)),
                         child: IconButton(
                           icon: Icon(
                             Icons.edit_outlined,

@@ -11,7 +11,13 @@ class MyApp extends StatelessWidget {
           centerTitle: false,
           leading: Icon(Icons.chevron_left),
           backgroundColor: Color(0xff181E27),
-          title: Text("Forgot Password"),
+          title: Text(
+            "Forgot Password",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          elevation: 0.0,
         ),
         backgroundColor: Color(0xff181E27),
         body: SafeArea(
@@ -32,11 +38,10 @@ class MyApp extends StatelessWidget {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
-                  style: TextStyle(
-                      color: Colors.white
-                  ),
+                  style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    fillColor: Colors.black, filled: true,
+                    fillColor: Colors.black,
+                    filled: true,
                     labelText: 'Email Address',
                     labelStyle: TextStyle(
                       color: Color(0x98FFFFFF),

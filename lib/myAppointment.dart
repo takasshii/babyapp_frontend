@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             title: Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
-                "Profile",
+                "Appointment",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
@@ -48,183 +48,19 @@ class MyApp extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 0),
-                          child: Align(
-                            alignment: Alignment.topLeft,
-                            child: IconButton(
-                              icon: Icon(Icons.account_circle),
-                              iconSize: 90,
-
-                              onPressed: () {}, //ここで設定開く
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: Container(
-                        width: 44,
-                        height: 44,
-                        padding: EdgeInsets.only(left: 0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border:
-                                Border.all(width: 1, color: Colors.white10)),
-                        child: IconButton(
-                          icon: Icon(
-                            Icons.edit_outlined,
-                            color: Color(0x98FFFFFF),
-                          ),
-                          iconSize: 24,
-                          onPressed: () {}, //ここで設定開く
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: Container(
-                        width: 44,
-                        height: 44,
-                        margin: EdgeInsets.only(left: 8),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(width: 1, color: Colors.white10),
-                        ),
-                        child: IconButton(
-                          icon: Icon(
-                            Icons.login_rounded,
-                            color: Color(0x98FFFFFF),
-                          ),
-                          iconSize: 24,
-                          onPressed: () {}, //ここで設定開く
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      //名前を取得
-                      child: Text(
-                        "[Display Name]",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                    Container(
-                      //年齢を取得
-                      child: Text(
-                        "[age]",
-                        style: TextStyle(
-                          color: Color(0x98FFFFFF),
-                          fontSize: 18,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                  ],
-                ),
                 Container(
-                  padding: EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.only(top: 4),
                   width: double.infinity,
                   child: Text(
-                    "[EmailAddress]",
-                    style: TextStyle(
-                        color: Colors.deepPurpleAccent.withOpacity(0.9),
-                        fontSize: 18),
+                    "Your next appointment",
+                    style: TextStyle(color: Color(0x98FFFFFF), fontSize: 18),
                     textAlign: TextAlign.left,
                   ),
                 ),
+                //1つ目ボタン
                 Container(
-                  //Statusを取得
                   padding: EdgeInsets.only(top: 20),
-                  width: double.infinity,
-                  child: Text(
-                    "Status",
-                    style: TextStyle(
-                      color: Color(0x98FFFFFF),
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                  width: double.infinity,
-                  //Statusを取得
-                  child: Text(
-                    "[Status]",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                Container(
-                  //Statusを取得
-                  padding: EdgeInsets.only(top: 20),
-                  width: double.infinity,
-                  child: Text(
-                    "Next Appointment",
-                    style: TextStyle(
-                      color: Color(0x98FFFFFF),
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                  width: double.infinity,
-                  //Statusを取得
-                  child: Text(
-                    "[Aug...]",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                Container(
-                  //Statusを取得
-                  padding: EdgeInsets.only(top: 20),
-                  width: double.infinity,
-                  child: Text(
-                    "Past Appointment",
-                    style: TextStyle(
-                      color: Color(0x98FFFFFF),
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                //1つ目
-                Container(
-                  padding: EdgeInsets.only(top: 10),
                   child: ElevatedButton(
                     onPressed: () {
                       //todo
@@ -331,7 +167,8 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                ), // ここに追加
+                ),
+                // ここに追加
               ],
             ),
           ),
