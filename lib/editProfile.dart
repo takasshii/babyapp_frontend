@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
           centerTitle: false,
           leading: Icon(Icons.chevron_left),
           backgroundColor: Color(0xff181E27),
-          title: Text("Complete Profile",
+          title: Text(
+            "Edit Profile",
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color(0xff181E27),
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+            padding: EdgeInsets.only(left: 20, top: 10, right: 20),
             child: Column(
               children: [
                 Container(
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     color: Colors.black,
-                    border: Border.all(width: 2),),
+                    border: Border.all(width: 2),
+                  ),
                   child: IconButton(
                     icon: Icon(
                       Icons.add_a_photo_outlined,
@@ -41,15 +43,26 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top:20),
-                  width: double.infinity,
-                  child: Text(
-                    "追加情報を記入してください",
-                    style: TextStyle(
-                        color: Color(0x98FFFFFF),
-                        fontSize: 15
+                  padding: EdgeInsets.only(top: 20),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      //todo
+                    },
+                    child: const Text(
+                      'Change Photo',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                     ),
-                    textAlign: TextAlign.center,
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.black,
+                      onPrimary: Colors.white,
+                      minimumSize: Size(150, 45),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -71,33 +84,13 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top:20),
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    style: TextStyle(
-                        color: Colors.white
-                    ),
-                    decoration: InputDecoration(
-                      fillColor: Colors.black, filled: true,
-                      labelText: 'Your Age',
-                      labelStyle: TextStyle(
-                        color: Color(0x98FFFFFF),
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(top:20),
+                  padding: EdgeInsets.only(top: 20),
                   child: TextFormField(
                     keyboardType: TextInputType.emailAddress,
-                    style: TextStyle(
-                        color: Colors.white
-                    ),
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      fillColor: Colors.black, filled: true,
+                      fillColor: Colors.black,
+                      filled: true,
                       labelText: 'Email Address',
                       labelStyle: TextStyle(
                         color: Color(0x98FFFFFF),
@@ -109,7 +102,25 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top:20),
+                  padding: EdgeInsets.only(top: 20),
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      fillColor: Colors.black,
+                      filled: true,
+                      labelText: 'Your Age',
+                      labelStyle: TextStyle(
+                        color: Color(0x98FFFFFF),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 20),
                   child: Row(
                     children: [
                       /*new RadioListTile(
@@ -142,16 +153,16 @@ class MyApp extends StatelessWidget {
                       //todo
                     },
                     child: const Text(
-                      'Send Request Rink',
+                      'Save Changes',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 15,
+                        fontSize: 18,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.deepPurpleAccent,
                       onPrimary: Colors.white,
-                      minimumSize: Size(230, 60),
+                      minimumSize: Size(300, 60),
                     ),
                   ),
                 ),

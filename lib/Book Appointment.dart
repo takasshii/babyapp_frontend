@@ -47,8 +47,8 @@ class MyApp extends StatelessWidget {
                   child: Text(
                     "Emails will be send to:",
                     style: TextStyle(
-                        color:Color(0x98FFFFFF),
-                        fontSize: 18,
+                      color:Color(0x98FFFFFF),
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,),
                     textAlign: TextAlign.left,
                   ),
@@ -59,8 +59,8 @@ class MyApp extends StatelessWidget {
                   child: Text(
                     "[Your EmailAddress]",
                     style: TextStyle(
-                        color: Colors.deepPurpleAccent.withOpacity(0.9),
-                        fontSize: 18,
+                      color: Colors.deepPurpleAccent.withOpacity(0.9),
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,),
                     textAlign: TextAlign.left,
                   ),
